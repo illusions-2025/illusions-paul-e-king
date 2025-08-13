@@ -35,13 +35,16 @@ function setup() {
 //if stillColour is truthy (non-zero), image will be black or white
 //but not both (ie no illusion)
 function drawCircles(stillColour){
-    ellipse(100,100,100,100)
+    let x = 50;
+    stroke(0); //outline colourn 0 = black
+    fill(50); //fill colour (gray)
+    ellipse(100,100,100,100);
 }
 
 //if stillColour is truthy (non-zero), image will be black or white
 //but not both (ie no illusion)
 function drawLines(stillColour){
-
+    drawLines(stillColour);
 }
 //this function is called once every 60 seconds unless
 //the noLoop() function is called
@@ -53,6 +56,7 @@ function draw() {
     // "150" represents a shade of gray 0(black) - 255(white)
     background(150)
     c = int(colourMode.value());
+
     drawCircles(c);
     drawLines(c);
     //noLoop();
