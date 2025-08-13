@@ -32,13 +32,13 @@ function setup() {
     ellipseMode(CENTER);
 }
 
-//if stillColour is truthy, image will be black or white
+//if stillColour is truthy (non-zero), image will be black or white
 //but not both (ie no illusion)
 function drawCircles(stillColour){
-
+    ellipse(100,100,100,100)
 }
 
-//if stillColour is truthy, image will be black or white
+//if stillColour is truthy (non-zero), image will be black or white
 //but not both (ie no illusion)
 function drawLines(stillColour){
 
@@ -50,6 +50,7 @@ function drawLines(stillColour){
 //However, as this code is used for breaking down the illusion, the noLoop() is commented out
 //so that the illusion can be redrawn correctly after user input interaction
 function draw() {
+    // "150" represents a shade of gray 0(black) - 255(white)
     background(150)
     c = int(colourMode.value());
     drawCircles(c);
