@@ -3,8 +3,6 @@ let colourMode;
 
 //this function is called once at the start of a sketch
 function setup() {
-
-
     //create a drawing surface on to the web page
     //this drawing surface is 1000 X 600
     canvas = createCanvas(1000,600);
@@ -32,7 +30,6 @@ function setup() {
     //refer to centre
     rectMode(CENTER);
     ellipseMode(CENTER);
-
 }
 
 //if stillColour is truthy, image will be black or white
