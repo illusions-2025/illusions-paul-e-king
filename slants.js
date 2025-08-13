@@ -35,7 +35,16 @@ function setup() {
 //if stillColour is truthy (non-zero), image will be black or white
 //but not both (ie no illusion)
 function drawCircles(stillColour){
-    let x = 50;
+    let ofs = 100;
+    let linewidth = width - (2*ofs);
+    let circlewidth = linewidth/16;
+    let x = ofs + circlewidth/2;
+    let y = 100;
+    for (let i=0; i<16; i++) {
+        stroke(0);
+        fill(0);
+        ellipse(x+(i*circlewidth),y,circlewidth,circlewidth);
+    }
     stroke(0); //outline colourn 0 = black
     fill(50); //fill colour (gray)
     ellipse(100,100,100,100);
